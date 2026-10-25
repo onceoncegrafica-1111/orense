@@ -18,112 +18,155 @@
 
     <style>
         /* ==========================================================================
-           1. SISTEMA CROMÁTICO PLANO BENETTON & POLO (SIN NEÓN, COLORES MATES)
+           1. SISTEMA CROMÁTICO BENETTON / POLO (COLORES VIVOS PLENOS & HAUTE COUTURE)
            ========================================================================== */
         :root {
-            /* 1. BLANCO CLÁSICO / VAINILLA (Modo por Defecto: Marfil & Dulce de Leche) */
-            --bg-body: #F8F5EE;
+            /* 1. BLANCO CLÁSICO / VAINILLA & CACAO */
+            --bg-body: #F7F4EC;
             --bg-surface: #FFFFFF;
-            --bg-surface-elevated: #EFE9DC;
+            --bg-surface-elevated: #1D1812;
             --color-primary: #1D1812;
             --color-accent: #A26B25;
+            --color-accent-border: #A26B25;
+            --color-accent-subtle: #F6EDE1;
             --color-text-main: #1D1812;
             --color-text-muted: #6B6256;
-            --color-border: #E5DFD3;
+            --color-text-elevated: #FFFFFF;
+            --color-border: #DFD7CA;
             --color-border-hover: #1D1812;
-            --badge-bg: #EFE9DC;
-            --badge-text: #5C4325;
+            --badge-bg: #FFFFFF;
+            --badge-text: #8E5A1D;
             --logo-color: #1D1812;
-            --shadow-card: 0 4px 16px rgba(29, 24, 18, 0.04);
+            --origin-color: #A26B25;
+            --footer-text: #6B6256;
+            --pattern-color: #1D1812;
+            --pattern-opacity: 0.085;
+            --shadow-card: 0 4px 16px rgba(29, 24, 18, 0.05);
+            --spring: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* 2. NEGRO 70% CACAO (Grafito Puro & Dorado Mate) */
+        /* 2. NEGRO 70% CACAO (Grafito Mate & Oro) */
         body[data-palette="black"] {
-            --bg-body: #111112;
-            --bg-surface: #18181B;
-            --bg-surface-elevated: #242429;
+            --bg-body: #111113;
+            --bg-surface: #18181C;
+            --bg-surface-elevated: #24242B;
             --color-primary: #FFFFFF;
             --color-accent: #D4AF37;
+            --color-accent-border: #D4AF37;
+            --color-accent-subtle: #2A2619;
             --color-text-main: #FFFFFF;
-            --color-text-muted: #9E9EA8;
-            --color-border: #2B2B30;
+            --color-text-muted: #A0A0AC;
+            --color-text-elevated: #FFFFFF;
+            --color-border: #2B2B33;
             --color-border-hover: #D4AF37;
             --badge-bg: #222228;
             --badge-text: #F3CA40;
             --logo-color: #FFFFFF;
+            --origin-color: #D4AF37;
+            --footer-text: #A0A0AC;
+            --pattern-color: #FFFFFF;
+            --pattern-opacity: 0.085;
             --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.45);
         }
 
-        /* 3. CELESTE GLACIAR (Gin & Limón / Polo Oxford) */
+        /* 3. CELESTE GLACIAR (Gin & Limón / Polo Oxford Puro) */
         body[data-palette="celeste"] {
-            --bg-body: #0A1822;
-            --bg-surface: #102432;
-            --bg-surface-elevated: #163245;
-            --color-primary: #EBF8FF;
-            --color-accent: #38BDF8;
-            --color-text-main: #FFFFFF;
-            --color-text-muted: #9AC0D8;
-            --color-border: #1E3E54;
-            --color-border-hover: #38BDF8;
-            --badge-bg: #163245;
-            --badge-text: #BAE6FD;
+            --bg-body: #2482C8;
+            --bg-surface: #FFFFFF;
+            --bg-surface-elevated: #0C3353;
+            --color-primary: #FFFFFF;
+            --color-accent: #176FA8;
+            --color-accent-border: #0A3B66;
+            --color-accent-subtle: #E8F4FC;
+            --color-text-main: #0B2C47;
+            --color-text-muted: #436A89;
+            --color-text-elevated: #FFFFFF;
+            --color-border: #C8E0F4;
+            --color-border-hover: #0A3B66;
+            --badge-bg: #FFFFFF;
+            --badge-text: #0E5887;
             --logo-color: #FFFFFF;
-            --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.45);
+            --origin-color: #E2F2FD;
+            --footer-text: #E2F2FD;
+            --pattern-color: #FFFFFF;
+            --pattern-opacity: 0.15;
+            --shadow-card: 0 8px 24px rgba(10, 48, 77, 0.20);
         }
 
-        /* 4. NARANJA APEROL (Terracota Mate & Cítrico) */
+        /* 4. NARANJA APEROL (Cítrico Vivo & Terracota Benetton) */
         body[data-palette="naranja"] {
-            --bg-body: #1E0C06;
-            --bg-surface: #2E140B;
-            --bg-surface-elevated: #441E11;
-            --color-primary: #FFF6F0;
-            --color-accent: #E06040;
-            --color-text-main: #FFF6F0;
-            --color-text-muted: #E2B5A2;
-            --color-border: #4D2315;
-            --color-border-hover: #E06040;
-            --badge-bg: #441E11;
-            --badge-text: #FFA585;
-            --logo-color: #FFF6F0;
-            --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.45);
+            --bg-body: #E65124;
+            --bg-surface: #FFFFFF;
+            --bg-surface-elevated: #3A1407;
+            --color-primary: #FFFFFF;
+            --color-accent: #D44419;
+            --color-accent-border: #781B00;
+            --color-accent-subtle: #FDEEE9;
+            --color-text-main: #24130A;
+            --color-text-muted: #6B493B;
+            --color-text-elevated: #FFFFFF;
+            --color-border: #FCD2C4;
+            --color-border-hover: #781B00;
+            --badge-bg: #FFFFFF;
+            --badge-text: #BA360E;
+            --logo-color: #FFFFFF;
+            --origin-color: #FFE5DC;
+            --footer-text: #FFE5DC;
+            --pattern-color: #FFFFFF;
+            --pattern-opacity: 0.15;
+            --shadow-card: 0 8px 24px rgba(84, 25, 6, 0.22);
         }
 
-        /* 5. VERDE BENETTON (Verde Racing Ícono de Marca) */
+        /* 5. VERDE (Verde Racing Ícono Benetton) */
         body[data-palette="verde"] {
-            --bg-body: #052614;
-            --bg-surface: #09381E;
-            --bg-surface-elevated: #0F4C2A;
+            --bg-body: #008744;
+            --bg-surface: #FFFFFF;
+            --bg-surface-elevated: #082D17;
             --color-primary: #FFFFFF;
-            --color-accent: #009848;
-            --color-text-main: #FFFFFF;
-            --color-text-muted: #A3D4B9;
-            --color-border: #13522E;
-            --color-border-hover: #00C853;
-            --badge-bg: #0F4C2A;
-            --badge-text: #69F0AE;
+            --color-accent: #007A3D;
+            --color-accent-border: #004520;
+            --color-accent-subtle: #E6F7EE;
+            --color-text-main: #0B2B18;
+            --color-text-muted: #3D6B50;
+            --color-text-elevated: #FFFFFF;
+            --color-border: #C6ECD7;
+            --color-border-hover: #004520;
+            --badge-bg: #FFFFFF;
+            --badge-text: #006834;
             --logo-color: #FFFFFF;
-            --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.45);
+            --origin-color: #DCFCE7;
+            --footer-text: #DCFCE7;
+            --pattern-color: #FFFFFF;
+            --pattern-opacity: 0.15;
+            --shadow-card: 0 8px 24px rgba(0, 56, 28, 0.22);
         }
 
-        /* 6. BOMBÍN AZUL REAL (Azul Noche Polo) */
+        /* 6. BOMBÍN AZUL (Azul Real Polo Intenso) */
         body[data-palette="bombin"] {
-            --bg-body: #080E1C;
-            --bg-surface: #101B34;
-            --bg-surface-elevated: #18284C;
+            --bg-body: #0E4994;
+            --bg-surface: #FFFFFF;
+            --bg-surface-elevated: #061F42;
             --color-primary: #FFFFFF;
-            --color-accent: #0045C2;
-            --color-text-main: #FFFFFF;
-            --color-text-muted: #9DB4E2;
-            --color-border: #1E315C;
-            --color-border-hover: #4382FF;
-            --badge-bg: #18284C;
-            --badge-text: #82B1FF;
+            --color-accent: #0C4388;
+            --color-accent-border: #052044;
+            --color-accent-subtle: #EBF2FB;
+            --color-text-main: #0A1E38;
+            --color-text-muted: #435E82;
+            --color-text-elevated: #FFFFFF;
+            --color-border: #CDE0F7;
+            --color-border-hover: #052044;
+            --badge-bg: #FFFFFF;
+            --badge-text: #0C4388;
             --logo-color: #FFFFFF;
-            --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.45);
+            --origin-color: #DBEAFE;
+            --footer-text: #DBEAFE;
+            --pattern-color: #FFFFFF;
+            --pattern-opacity: 0.15;
+            --shadow-card: 0 8px 24px rgba(6, 31, 66, 0.24);
         }
 
         /* ==========================================================================
-           2. RESET & BASE (AMIR MOHSENI STYLE)
+           2. RESET & BASE
            ========================================================================== */
         * {
             margin: 0;
@@ -149,18 +192,58 @@
             padding: 16px 16px 64px;
             overflow-x: hidden;
             position: relative;
-            transition: background-color 0.4s ease, color 0.4s ease;
+            transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
         }
 
-        /* Grano fotográfico analógico limpio */
+        /* GRANO ANALÓGICO SUTIL */
         body::before {
             content: '';
             position: fixed;
             inset: 0;
-            opacity: 0.03;
+            opacity: 0.035;
             pointer-events: none;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
             z-index: 100;
+        }
+
+        /* ==========================================================================
+           PATRÓN HERMÈS MONOGRAM CON LA CORONA ORENSE (MOVIMIENTO INFINITO)
+           ========================================================================== */
+        .ambient-canvas-orense {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+
+        .crown-stencil-pattern {
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            width: 160%;
+            height: 160%;
+            opacity: var(--pattern-opacity);
+            background-color: var(--pattern-color);
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='263 -41 190 190'%3E%3Cpath d='M360.54,0c1.54.89,3.24,1.57,4.58,2.69,4.57,3.8,5.08,10.47,1.29,14.77-4.08,4.63-11.23,5.19-15.64,1.23-5.8-5.21-4.42-14.38,2.67-17.64.84-.39,1.71-.7,2.56-1.05,1.51,0,3.02,0,4.53,0ZM353.73,10.73c.02,2.22,2,4.15,4.27,4.17,2.37.03,4.3-1.9,4.3-4.29,0-2.24-1.95-4.16-4.25-4.19-2.31-.03-4.34,2-4.32,4.31Z'/%3E%3Cpath d='M325.36,34.1c7.8-11.31,23.31-12.19,32.65-2.32,4.54-4.69,9.97-7.29,16.63-6.75,6.55.53,11.63,3.67,15.51,8.93,1.56-.86,3-1.86,4.59-2.48,6.31-2.48,12.31-1.92,17.34,2.84,5.04,4.78,6.07,10.87,3.64,17.16-3.38,8.76-7.28,17.33-11.01,25.95-1.7,3.94-3.55,7.83-5.27,11.76-.47,1.08-1.04,1.55-2.32,1.55-26.26-.04-52.51-.02-78.77,0-.9,0-1.63,0-2.09-1.06-5.28-12.07-10.65-24.1-15.91-36.19-1.71-3.93-2.28-8.04-1-12.24,2.93-9.68,13.81-14.05,22.8-9.15,1.06.58,2.06,1.28,3.21,2ZM352.95,80.7c.05-.69.12-1.2.12-1.71.01-10.51.02-21.01,0-31.52,0-.98-.12-1.97-.28-2.94-.83-4.98-5.05-8.99-9.73-9.26-6.4-.37-11.84,5.64-10.59,11.93.9,4.55,2.15,9.03,3.27,13.53,1.53,6.14,3.06,12.27,4.65,18.39.15.58.66,1.5,1.03,1.51,3.81.11,7.62.07,11.53.07ZM363.09,80.69c3.88,0,7.3.04,10.71-.06.39-.01.96-.73,1.1-1.22,1.14-4.08,2.23-8.17,3.26-12.27,1.67-6.64,3.37-13.27,4.89-19.95.95-4.19-1.32-8.69-5.1-10.73-3.9-2.1-8.26-1.46-11.53,1.74-2.63,2.58-3.38,5.88-3.39,9.39-.02,6.21.04,12.42.06,18.63.01,4.75,0,9.5,0,14.47ZM329.84,80.88c.1-.33.14-.39.13-.44-2.76-11.86-5.43-23.75-8.34-35.58-1.17-4.73-6.65-6.92-10.71-4.66-3.29,1.83-4.43,5.62-2.56,9.72,4.58,10.02,9.31,19.98,14.02,29.95.2.43.79.94,1.21.96,2.07.1,4.15.04,6.25.04ZM385.31,80.89c2.1,0,3.95-.06,5.8.02,1.09.05,1.65-.35,2.11-1.33,3.4-7.32,6.88-14.6,10.3-21.92,1.45-3.1,2.98-6.18,4.15-9.39,1.65-4.55-1.69-8.97-6.52-8.94-3.55.03-6.46,2.42-7.39,6.23-1.91,7.84-3.76,15.7-5.63,23.55-.91,3.83-1.83,7.67-2.81,11.77Z'/%3E%3Cpath d='M315.95,106.94v-10.83h83.66v10.83h-83.66Z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='263 -41 190 190'%3E%3Cpath d='M360.54,0c1.54.89,3.24,1.57,4.58,2.69,4.57,3.8,5.08,10.47,1.29,14.77-4.08,4.63-11.23,5.19-15.64,1.23-5.8-5.21-4.42-14.38,2.67-17.64.84-.39,1.71-.7,2.56-1.05,1.51,0,3.02,0,4.53,0ZM353.73,10.73c.02,2.22,2,4.15,4.27,4.17,2.37.03,4.3-1.9,4.3-4.29,0-2.24-1.95-4.16-4.25-4.19-2.31-.03-4.34,2-4.32,4.31Z'/%3E%3Cpath d='M325.36,34.1c7.8-11.31,23.31-12.19,32.65-2.32,4.54-4.69,9.97-7.29,16.63-6.75,6.55.53,11.63,3.67,15.51,8.93,1.56-.86,3-1.86,4.59-2.48,6.31-2.48,12.31-1.92,17.34,2.84,5.04,4.78,6.07,10.87,3.64,17.16-3.38,8.76-7.28,17.33-11.01,25.95-1.7,3.94-3.55,7.83-5.27,11.76-.47,1.08-1.04,1.55-2.32,1.55-26.26-.04-52.51-.02-78.77,0-.9,0-1.63,0-2.09-1.06-5.28-12.07-10.65-24.1-15.91-36.19-1.71-3.93-2.28-8.04-1-12.24,2.93-9.68,13.81-14.05,22.8-9.15,1.06.58,2.06,1.28,3.21,2ZM352.95,80.7c.05-.69.12-1.2.12-1.71.01-10.51.02-21.01,0-31.52,0-.98-.12-1.97-.28-2.94-.83-4.98-5.05-8.99-9.73-9.26-6.4-.37-11.84,5.64-10.59,11.93.9,4.55,2.15,9.03,3.27,13.53,1.53,6.14,3.06,12.27,4.65,18.39.15.58.66,1.5,1.03,1.51,3.81.11,7.62.07,11.53.07ZM363.09,80.69c3.88,0,7.3.04,10.71-.06.39-.01.96-.73,1.1-1.22,1.14-4.08,2.23-8.17,3.26-12.27,1.67-6.64,3.37-13.27,4.89-19.95.95-4.19-1.32-8.69-5.1-10.73-3.9-2.1-8.26-1.46-11.53,1.74-2.63,2.58-3.38,5.88-3.39,9.39-.02,6.21.04,12.42.06,18.63.01,4.75,0,9.5,0,14.47ZM329.84,80.88c.1-.33.14-.39.13-.44-2.76-11.86-5.43-23.75-8.34-35.58-1.17-4.73-6.65-6.92-10.71-4.66-3.29,1.83-4.43,5.62-2.56,9.72,4.58,10.02,9.31,19.98,14.02,29.95.2.43.79.94,1.21.96,2.07.1,4.15.04,6.25.04ZM385.31,80.89c2.1,0,3.95-.06,5.8.02,1.09.05,1.65-.35,2.11-1.33,3.4-7.32,6.88-14.6,10.3-21.92,1.45-3.1,2.98-6.18,4.15-9.39,1.65-4.55-1.69-8.97-6.52-8.94-3.55.03-6.46,2.42-7.39,6.23-1.91,7.84-3.76,15.7-5.63,23.55-.91,3.83-1.83,7.67-2.81,11.77Z'/%3E%3Cpath d='M315.95,106.94v-10.83h83.66v10.83h-83.66Z'/%3E%3C/svg%3E");
+            -webkit-mask-repeat: repeat;
+            mask-repeat: repeat;
+            -webkit-mask-size: 72px 72px;
+            mask-size: 72px 72px;
+            transform: rotate(-12deg);
+            animation: orenseDrift 45s infinite linear;
+            will-change: mask-position, -webkit-mask-position;
+            transition: background-color 0.4s ease, opacity 0.4s ease;
+        }
+
+        @keyframes orenseDrift {
+            0%   { -webkit-mask-position: 0 0; mask-position: 0 0; }
+            100% { -webkit-mask-position: 576px 288px; mask-position: 576px 288px; }
         }
 
         .master-hub-shell {
@@ -170,31 +253,32 @@
             flex-direction: column;
             gap: 22px;
             z-index: 10;
+            position: relative;
         }
 
         /* ==========================================================================
-           3. DOCK SEÑALADOR: CUADRADITOS JUNTOS, SIN SOMBRAS Y SIN TOCAR EL TECHO
+           3. DOCK SEÑALADOR BENETTON
            ========================================================================== */
         .bookmark-dock {
             background: var(--bg-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            height: 38px;
+            border: 1.5px solid var(--color-border);
+            border-radius: 6px;
+            height: 40px;
             padding: 0 12px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: none; /* CERO SOMBRA TRASERA */
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
             position: relative;
             overflow: visible;
-            margin: 12px auto 0; /* Margen superior amplio: no toca el borde de la pantalla */
+            margin: 8px auto 0;
             width: 100%;
-            transition: border-color 0.3s ease, background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .bookmark-label {
             font-family: 'Barlow', sans-serif;
-            font-size: 0.72rem;
+            font-size: 0.74rem;
             font-weight: 800;
             letter-spacing: 0.16em;
             text-transform: uppercase;
@@ -204,26 +288,24 @@
 
         .bookmark-tabs-row {
             display: flex;
-            align-items: flex-end; /* Base común */
-            gap: 2px; /* CUADRADITOS BIEN JUNTITOS */
+            align-items: flex-end;
+            gap: 3px;
             height: 100%;
             overflow: visible;
         }
 
-        /* CUADRADITOS PLANOS TIPO SEÑALADOR */
         .bookmark-tab {
             width: 22px;
-            height: 20px;
-            border-radius: 2px 2px 0 0;
-            border: 1px solid rgba(0, 0, 0, 0.14);
+            height: 22px;
+            border-radius: 3px 3px 0 0;
+            border: 1px solid rgba(0, 0, 0, 0.16);
             outline: none;
             cursor: pointer;
             position: relative;
-            box-shadow: none; /* CERO SOMBRA */
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: none;
+            transition: all 0.22s var(--spring);
         }
 
-        /* HITBOX TÁCTIL AMPLIADO (FÁCIL DE TOCAR CON EL DEDO EN EL MÓVIL) */
         .bookmark-tab::after {
             content: '';
             position: absolute;
@@ -238,25 +320,22 @@
             transform: translateY(-2px);
         }
 
-        /* ESTADO ACTIVO: SEÑALADOR MÁS ALTO QUE LA BARRA, LIMPIO Y SIN TOCAR EL TECHO */
         .bookmark-tab.active {
-            height: 44px; /* Sobresale limpiamente de los 38px de la barra */
-            transform: translateY(-6px);
-            border: 1.5px solid var(--color-primary);
-            box-shadow: none; /* SIN SOMBRAS */
+            height: 44px;
+            transform: translateY(-5px);
+            border: 2px solid var(--color-primary);
             z-index: 10;
         }
 
-        /* COLORES PLANOS BENETTON (ORDEN EXCLUSIVO) */
         .tab-blanco  { background: #FFFFFF; border: 1px solid #CBC5BA !important; }
-        .tab-black   { background: #111112; border: 1px solid #44444A !important; }
-        .tab-celeste { background: #38BDF8; }
-        .tab-naranja { background: #E06040; }
-        .tab-verde   { background: #009848; }
-        .tab-bombin  { background: #0045C2; }
+        .tab-black   { background: #111113; border: 1px solid #55555C !important; }
+        .tab-celeste { background: #2482C8; }
+        .tab-naranja { background: #E65124; }
+        .tab-verde   { background: #008744; }
+        .tab-bombin  { background: #0E4994; }
 
         /* ==========================================================================
-           4. MONUMENTO DEL LOGO + ESPEJADO EN CRISTAL SUAVE (SIN CORTES)
+           4. MONUMENTO DEL LOGO + ESPEJADO EN CRISTAL
            ========================================================================== */
         .logo-sculpture {
             display: flex;
@@ -281,8 +360,8 @@
             width: 100%;
             height: auto;
             color: var(--logo-color);
-            transition: color 0.4s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
+            transition: color 0.4s ease, transform 0.35s var(--spring);
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
         }
 
         .logo-svg-real path {
@@ -293,19 +372,17 @@
             transform: scale(1.02);
         }
 
-        /* REFLEJO EN SUELO DE CRISTAL MEJORADO: SIN CORTES, DESVANECIMIENTO NATURAL */
         .logo-glass-reflection {
             width: 100%;
             max-width: 290px;
-            height: 54px; /* Mayor altura para contener toda la silueta */
+            height: 54px;
             margin-top: -2px;
             overflow: hidden;
-            opacity: 0.24;
-            transform: scaleY(-0.85); /* Inversión en perspectiva */
+            opacity: 0.25;
+            transform: scaleY(-0.85);
             filter: blur(0.9px);
-            /* Degradado de múltiples paradas para fundido total en el piso */
-            mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.25) 45%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.25) 45%, transparent 100%);
+            mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.25) 45%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.25) 45%, transparent 100%);
             pointer-events: none;
             color: var(--logo-color);
         }
@@ -318,79 +395,96 @@
             font-family: 'Barlow', sans-serif;
             font-size: 0.82rem;
             font-weight: 800;
-            letter-spacing: 0.28em;
+            letter-spacing: 0.26em;
             text-transform: uppercase;
-            color: var(--color-accent);
+            color: var(--origin-color);
             margin-top: 10px;
+            transition: color 0.3s ease;
         }
 
         /* ==========================================================================
-           5. INSIGNIAS ANIMADAS FLAMEANDO EN ONDA ARMÓNICA
+           5. INSIGNIAS FLAMEANTES
            ========================================================================== */
         .merits-banner {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 9px;
             flex-wrap: wrap;
-            margin-top: 10px;
+            margin-top: 12px;
             perspective: 800px;
         }
 
         .merit-pill {
             font-family: 'Barlow', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
+            font-size: 0.74rem;
+            font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             padding: 6px 14px;
-            border-radius: 4px; /* Corte rectangular plano */
+            border-radius: 5px;
             background: var(--badge-bg);
             color: var(--badge-text);
-            border: 1px solid var(--color-border);
+            border: 1.5px solid var(--color-border);
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transform-origin: left center;
             animation: flagWave 4.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
             will-change: transform;
+            transition: all 0.3s ease;
         }
 
-        /* ONDA ARMÓNICA CONTINUA ENTRE LAS 3 INSIGNIAS */
         .merit-pill:nth-child(1) { animation-delay: 0s; }
         .merit-pill:nth-child(2) { animation-delay: 0.28s; }
         .merit-pill:nth-child(3) { animation-delay: 0.56s; }
 
         @keyframes flagWave {
             0%   { transform: translateY(0px) rotate(0deg) skewY(0deg); }
-            25%  { transform: translateY(-4px) rotate(1.4deg) skewY(0.9deg); }
-            50%  { transform: translateY(2px) rotate(-1.1deg) skewY(-0.7deg); }
-            75%  { transform: translateY(-2px) rotate(0.9deg) skewY(0.4deg); }
+            25%  { transform: translateY(-3.5px) rotate(1.2deg) skewY(0.8deg); }
+            50%  { transform: translateY(1.5px) rotate(-1deg) skewY(-0.6deg); }
+            75%  { transform: translateY(-1.5px) rotate(0.8deg) skewY(0.4deg); }
             100% { transform: translateY(0px) rotate(0deg) skewY(0deg); }
         }
 
         /* ==========================================================================
-           6. MANIFIESTO EDITORIAL ORGÁNICO
+           6. MANIFIESTO EDITORIAL CON MARCA DE AGUA
            ========================================================================== */
         .editorial-manifesto-card {
             background: var(--bg-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 6px;
-            padding: 20px 22px;
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
+            padding: 22px 24px;
             box-shadow: var(--shadow-card);
-            transition: border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s var(--spring);
+        }
+
+        .editorial-manifesto-card::after {
+            content: '“';
+            position: absolute;
+            top: 4px;
+            right: 18px;
+            font-family: 'Barlow', serif;
+            font-size: 5rem;
+            line-height: 1;
+            color: var(--color-accent);
+            opacity: 0.12;
+            pointer-events: none;
         }
 
         .editorial-manifesto-card:hover {
             border-color: var(--color-border-hover);
+            transform: translateY(-2px);
         }
 
         .manifesto-lead {
             font-family: 'Barlow', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 800;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.20em;
             text-transform: uppercase;
             color: var(--color-accent);
             margin-bottom: 6px;
@@ -400,35 +494,40 @@
         .manifesto-quote {
             font-family: 'Barlow', sans-serif;
             font-size: 1.15rem;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.35;
             color: var(--color-text-main);
             letter-spacing: -0.01em;
+            position: relative;
+            z-index: 2;
         }
 
         .manifesto-detail {
-            font-size: 0.82rem;
+            font-size: 0.83rem;
             color: var(--color-text-muted);
-            line-height: 1.5;
-            margin-top: 8px;
+            line-height: 1.55;
+            margin-top: 9px;
             font-weight: 500;
+            position: relative;
+            z-index: 2;
         }
 
         /* ==========================================================================
-           7. ACCIONES BENTO CON FÍSICA MAGNÉTICA
+           7. ACCIONES BENTO CON DINÁMICA DE ÉLITE Y VARIEDAD VISUAL
            ========================================================================== */
         .actions-stack {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 13px;
         }
 
-        /* HERO CARD: WHATSAPP DIRECTO */
+        /* HERO CARD: WHATSAPP DIRECTO CON REFLEJO MAGNÉTICO */
         .card-action-hero {
             background: var(--bg-surface);
-            border: 1.5px solid var(--color-border);
-            border-radius: 6px;
-            padding: 20px;
+            border: 2px solid var(--color-border);
+            border-left: 6px solid #25D366;
+            border-radius: 8px;
+            padding: 20px 22px;
             text-decoration: none;
             color: var(--color-text-main);
             display: flex;
@@ -438,18 +537,49 @@
             box-shadow: var(--shadow-card);
             position: relative;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s var(--spring);
+        }
+
+        .card-action-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(
+                115deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.0) 25%,
+                rgba(255, 255, 255, 0.70) 50%,
+                rgba(255, 255, 255, 0.0) 75%,
+                transparent 100%
+            );
+            transform: skewX(-25deg);
+            animation: luxuryShimmer 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        @keyframes luxuryShimmer {
+            0% { left: -150%; opacity: 0; }
+            15% { opacity: 1; }
+            35% { left: 160%; opacity: 0.85; }
+            36%, 100% { left: 160%; opacity: 0; }
         }
 
         .card-action-hero:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             border-color: #25D366;
+            box-shadow: 0 12px 28px rgba(37, 211, 102, 0.22);
         }
 
         .hero-info {
             display: flex;
             flex-direction: column;
             gap: 3px;
+            position: relative;
+            z-index: 2;
         }
 
         .live-tag {
@@ -457,7 +587,7 @@
             align-items: center;
             gap: 6px;
             font-family: 'Barlow', sans-serif;
-            font-size: 0.68rem;
+            font-size: 0.70rem;
             font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -466,38 +596,39 @@
 
         .live-tag::before {
             content: '';
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: #25D366;
-            box-shadow: 0 0 6px #25D366;
+            box-shadow: 0 0 8px #25D366;
         }
 
         .hero-action-title {
             font-family: 'Barlow', sans-serif;
-            font-size: 1.22rem;
+            font-size: 1.25rem;
             font-weight: 800;
             letter-spacing: -0.01em;
             line-height: 1.2;
         }
 
         .hero-action-sub {
-            font-size: 0.82rem;
+            font-size: 0.83rem;
             color: var(--color-text-muted);
             font-weight: 500;
         }
 
-        /* BOTÓN MAGNÉTICO AMIR MOHSENI */
         .magnetic-button-circle {
             width: 44px;
             height: 44px;
-            border-radius: 4px;
+            border-radius: 6px;
             background: var(--color-text-main);
             color: var(--bg-body);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            position: relative;
+            z-index: 2;
             transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease;
         }
 
@@ -513,7 +644,7 @@
             stroke-width: 2.2;
         }
 
-        /* GRILLA BENTO */
+        /* GRILLA BENTO CON JERARQUÍA Y DINAMISMO */
         .bento-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -522,30 +653,73 @@
 
         .bento-box {
             background: var(--bg-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 6px;
-            padding: 16px 18px;
+            border: 1.8px solid var(--color-border);
+            border-radius: 8px;
+            padding: 18px 20px;
             text-decoration: none;
             color: var(--color-text-main);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 105px;
+            min-height: 112px;
             box-shadow: var(--shadow-card);
-            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.28s var(--spring);
         }
 
         .bento-box:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             border-color: var(--color-border-hover);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
         }
 
+        /* 1. TIENDA OFICIAL: TARJETA PROTAGÓNICA CON BORDE ARMÓNICO RESALTADO */
+        .bento-box.bento-shop {
+            border: 2px solid var(--color-accent-border);
+            background: linear-gradient(135deg, var(--bg-surface) 0%, var(--color-accent-subtle) 100%);
+        }
+        .bento-box.bento-shop .bento-icon-symbol {
+            background: var(--color-accent-border);
+            color: #FFFFFF;
+            padding: 7px;
+            border-radius: 6px;
+        }
+        .bento-shop-badge {
+            font-family: 'Barlow', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 900;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: var(--color-accent-border);
+            color: #FFFFFF;
+            margin-left: 6px;
+        }
+
+        /* 2. INSTAGRAM: ACENTO DINÁMICO */
+        .bento-box.bento-insta .bento-icon-symbol {
+            color: #E1306C;
+        }
+        .bento-box.bento-insta:hover {
+            border-color: #E1306C;
+        }
+
+        /* 3. QUIÉNES SOMOS: ANCHO COMPLETO Y LISTÓN EDITORIAL DE ALTO CONTRASTE */
         .bento-box.full-width {
             grid-column: span 2;
             flex-direction: row;
             align-items: center;
             min-height: auto;
-            padding: 16px 20px;
+            padding: 18px 22px;
+            border-left: 6px solid var(--color-accent-border);
+            background: var(--bg-surface);
+        }
+
+        /* 4. DISTRIBUIDORES & EVENTOS */
+        .bento-box.bento-distro .bento-icon-symbol {
+            color: var(--color-primary);
         }
 
         .bento-top {
@@ -559,6 +733,12 @@
             color: var(--color-accent);
             display: flex;
             align-items: center;
+            justify-content: center;
+            transition: transform 0.25s var(--spring);
+        }
+
+        .bento-box:hover .bento-icon-symbol {
+            transform: scale(1.12);
         }
 
         .bento-icon-symbol svg {
@@ -567,35 +747,37 @@
         }
 
         .bento-arrow-icon {
-            opacity: 0.3;
-            transition: transform 0.22s ease, opacity 0.22s ease;
+            opacity: 0.35;
+            transition: transform 0.22s ease, opacity 0.22s ease, color 0.22s ease;
             display: flex;
             align-items: center;
         }
 
         .bento-box:hover .bento-arrow-icon {
             opacity: 1;
-            transform: translateX(4px);
+            transform: translateX(5px);
             color: var(--color-accent);
         }
 
         .bento-title-text {
             font-family: 'Barlow', sans-serif;
             font-size: 1.05rem;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.25;
             letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
         }
 
         .bento-caption {
-            font-size: 0.76rem;
+            font-size: 0.77rem;
             color: var(--color-text-muted);
-            margin-top: 2px;
+            margin-top: 3px;
             font-weight: 500;
         }
 
         /* ==========================================================================
-           8. CATÁLOGO ESCULTÓRICO (CERO PRECIOS)
+           8. CATÁLOGO ESCULTÓRICO
            ========================================================================== */
         .showcase-section {
             display: flex;
@@ -607,7 +789,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            border-bottom: 1px solid var(--color-border);
+            border-bottom: 2px solid var(--color-border);
             padding-bottom: 8px;
         }
 
@@ -617,22 +799,22 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            color: var(--color-text-main);
+            color: var(--color-primary);
         }
 
         .showcase-link {
             font-family: 'Barlow', sans-serif;
             font-size: 0.76rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             text-decoration: none;
-            color: var(--color-accent);
+            color: var(--origin-color);
             transition: opacity 0.2s;
         }
 
         .showcase-link:hover {
-            opacity: 0.7;
+            opacity: 0.75;
         }
 
         .showcase-carousel-strip {
@@ -652,8 +834,8 @@
             flex: 0 0 195px;
             scroll-snap-align: start;
             background: var(--bg-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
+            border: 1.8px solid var(--color-border);
+            border-radius: 8px;
             padding: 12px;
             display: flex;
             flex-direction: column;
@@ -661,20 +843,21 @@
             text-decoration: none;
             color: var(--color-text-main);
             box-shadow: var(--shadow-card);
-            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.28s var(--spring);
         }
 
         .product-sculpture-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             border-color: var(--color-border-hover);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
         }
 
         .product-lens-container {
             width: 100%;
             height: 130px;
-            border-radius: 3px;
+            border-radius: 6px;
             overflow: hidden;
-            background: var(--bg-surface-elevated);
+            background: #EFE9DC;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -685,12 +868,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 3px;
+            border-radius: 6px;
             transition: transform 0.4s ease;
         }
 
         .product-sculpture-card:hover .product-lens-container img {
-            transform: scale(1.06);
+            transform: scale(1.08);
         }
 
         .product-copy-block {
@@ -701,52 +884,55 @@
 
         .product-spec-name {
             font-family: 'Barlow', sans-serif;
-            font-size: 0.92rem;
-            font-weight: 700;
+            font-size: 0.94rem;
+            font-weight: 800;
             line-height: 1.25;
         }
 
         .product-spec-notes {
-            font-size: 0.74rem;
+            font-size: 0.75rem;
             color: var(--color-text-muted);
             line-height: 1.4;
             font-weight: 500;
         }
 
         /* ==========================================================================
-           9. RECONOCIMIENTO TELENOCHE
+           9. RECONOCIMIENTO TELENOCHE (BLOQUE ESCULTÓRICO DE CONTRASTE ELEVADO)
            ========================================================================== */
         .legacy-feature-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 6px;
-            padding: 20px 22px;
+            background: var(--bg-surface-elevated);
+            color: var(--color-text-elevated);
+            border: 2px solid var(--color-border-hover);
+            border-radius: 8px;
+            padding: 22px 24px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            box-shadow: var(--shadow-card);
+            gap: 7px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+            transition: all 0.3s ease;
         }
 
         .legacy-eyebrow {
             font-family: 'Barlow', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 800;
-            letter-spacing: 0.16em;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--color-accent);
+            color: var(--origin-color);
         }
 
         .legacy-title {
             font-family: 'Barlow', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.22rem;
             font-weight: 800;
             letter-spacing: -0.01em;
             line-height: 1.3;
+            color: #FFFFFF;
         }
 
         .legacy-body {
-            font-size: 0.82rem;
-            color: var(--color-text-muted);
+            font-size: 0.83rem;
+            color: rgba(255, 255, 255, 0.82);
             line-height: 1.55;
             font-weight: 500;
         }
@@ -757,7 +943,7 @@
         .hub-colophon {
             margin-top: 10px;
             padding-top: 24px;
-            border-top: 1px solid var(--color-border);
+            border-top: 2px solid var(--color-border);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -767,59 +953,63 @@
 
         .colophon-monogram {
             font-family: 'Barlow', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 900;
-            letter-spacing: 0.22em;
-            color: var(--color-text-main);
+            letter-spacing: 0.24em;
+            color: var(--color-primary);
         }
 
         .colophon-address {
-            font-size: 0.76rem;
-            color: var(--color-text-muted);
-            font-weight: 500;
+            font-size: 0.78rem;
+            color: var(--footer-text);
+            font-weight: 600;
             max-width: 360px;
             line-height: 1.5;
         }
 
         .colophon-copy-tag {
             font-family: 'Barlow', sans-serif;
-            font-size: 0.68rem;
-            color: var(--color-text-muted);
-            letter-spacing: 0.1em;
-            font-weight: 600;
-            opacity: 0.8;
+            font-size: 0.70rem;
+            color: var(--footer-text);
+            letter-spacing: 0.12em;
+            font-weight: 700;
+            opacity: 0.85;
             margin-top: 4px;
         }
     </style>
 </head>
 <body data-palette="blanco">
 
+    <!-- FONDO AMBIENTAL: PATRÓN HERMÈS MONOGRAM DE LA CORONA ORENSE -->
+    <div class="ambient-canvas-orense">
+        <div class="crown-stencil-pattern"></div>
+    </div>
+
     <!-- CONTENEDOR PRINCIPAL MOBILE HUB -->
     <main class="master-hub-shell">
 
         <!-- ==========================================================================
-             DOCK SEÑALADOR: CUADRADITOS ALINEADOS, FÁCILES DE TOCAR Y SIN TOCAR EL TECHO
+             DOCK SEÑALADOR: PALETAS ORENSE BENETTON / POLO
              ========================================================================== -->
         <nav class="bookmark-dock" aria-label="Selector de Paletas de Sabor">
             <span class="bookmark-label" id="paletteActiveLabel">Blanco Clásico</span>
             <div class="bookmark-tabs-row">
-                <!-- ORDEN SOLICITADO: 1° Blanco, 2° Negro, 3° Celeste, 4° Naranja, 5° Verde, 6° Bombín -->
                 <button class="bookmark-tab tab-blanco active" data-target="blanco" title="1° Blanco Clásico" onclick="setOrensePalette('blanco', 'Blanco Clásico')"></button>
                 <button class="bookmark-tab tab-black" data-target="black" title="2° Black 70% Cacao" onclick="setOrensePalette('black', 'Black 70% Cacao')"></button>
-                <button class="bookmark-tab tab-celeste" data-target="celeste" title="3° Celeste/ Gin" onclick="setOrensePalette('celeste', 'Celeste')"></button>
+                <button class="bookmark-tab tab-celeste" data-target="celeste" title="3° Celeste / Gin" onclick="setOrensePalette('celeste', 'Celeste Glaciar')"></button>
                 <button class="bookmark-tab tab-naranja" data-target="naranja" title="4° Naranja & Aperol" onclick="setOrensePalette('naranja', 'Naranja & Aperol')"></button>
-                <button class="bookmark-tab tab-verde" data-target="verde" title="5° Verde" onclick="setOrensePalette('verde', 'Verde')"></button>
-                <button class="bookmark-tab tab-bombin" data-target="bombin" title="6° Azul" onclick="setOrensePalette('bombin', 'Azul')"></button>
+                <button class="bookmark-tab tab-verde" data-target="verde" title="5° Verde Benetton" onclick="setOrensePalette('verde', 'Verde Benetton')"></button>
+                <button class="bookmark-tab tab-bombin" data-target="bombin" title="6° Azul Polo" onclick="setOrensePalette('bombin', 'Azul Polo')"></button>
             </div>
         </nav>
 
         <!-- ==========================================================================
-             MONUMENTO DEL LOGO + ESPEJADO EN CRISTAL SUAVE (SIN CORTES)
+             MONUMENTO DEL LOGO + ESPEJADO EN CRISTAL
              ========================================================================== -->
         <header class="logo-sculpture">
             <div class="logo-emblem-container">
 
-                <!-- SVG OFICIAL ORENSE VECTORIZADO (LIMPIO, SIN DESTELLO ARTIFICIAL) -->
+                <!-- SVG OFICIAL ORENSE VECTORIZADO -->
                 <svg id="orense-emblem-svg" class="logo-svg-real" viewBox="0 0 712.01 257.1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="orense-paths">
                         <path class="cls-1" d="M0,187.59c.28-1.7.51-3.42.85-5.11,4.69-23.11,18.08-39.31,39.85-47.87,22.56-8.88,44.47-6.73,63.98,8.14,17.16,13.07,24.93,31.34,24.25,52.69-.77,24.04-12.65,41.77-33.61,53.13-25.14,13.63-56.52,9.27-76.51-10.34-10.7-10.5-16.7-23.43-18.46-38.31-.07-.63-.23-1.24-.35-1.86,0-3.49,0-6.97,0-10.46ZM109.72,193.26c.24-24.94-20.2-46.49-44.21-46.91-27.28-.48-46.58,21.63-46.95,45.85-.39,25.42,19.98,46.51,44.7,47.03,25.67.54,46.24-20.99,46.46-45.97Z"/>
@@ -850,7 +1040,7 @@
                     </g>
                 </svg>
 
-                <!-- REFLEJO EN SUELO DE CRISTAL MEJORADO (SIN CORTES BRUSCOS) -->
+                <!-- REFLEJO EN SUELO DE CRISTAL -->
                 <svg class="logo-glass-reflection" viewBox="0 0 712.01 257.1" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
                     <use href="#orense-paths"/>
                 </svg>
@@ -880,11 +1070,11 @@
         </section>
 
         <!-- ==========================================================================
-             ACCIONES PRINCIPALES (BENTO GRID + FÍSICA MAGNÉTICA)
+             ACCIONES PRINCIPALES (BENTO GRID CON RITMO Y JERARQUÍA)
              ========================================================================== -->
         <nav class="actions-stack">
 
-            <!-- 1. WHATSAPP HERO (ATENCIÓN INMEDIATA) -->
+            <!-- 1. WHATSAPP HERO (CON EFECTO DE BARRIDO DE LUZ LÍQUIDA) -->
             <a href="https://wa.me/5491135665677?text=%C2%A1Hola%20Alfajores%20Orense!%20%F0%9F%A5%9E%20Quisiera%20hacer%20un%20pedido%20o%20consulta." target="_blank" rel="noopener noreferrer" class="card-action-hero" onclick="triggerTactile()">
                 <div class="hero-info">
                     <span class="live-tag">Atención Inmediata</span>
@@ -896,11 +1086,11 @@
                 </div>
             </a>
 
-            <!-- 2. GRILLA BENTO DE ACCESOS DIRECTOS -->
+            <!-- 2. GRILLA BENTO CON DIFERENCIACIÓN VISUAL -->
             <div class="bento-grid">
 
-                <!-- TIENDA ONLINE -->
-                <a href="https://www.alfajoresorense.com.ar/productos/" target="_blank" rel="noopener noreferrer" class="bento-box" onclick="triggerTactile()">
+                <!-- TIENDA ONLINE (DESTACADA CON MICRO-INSIGNIA) -->
+                <a href="https://www.alfajoresorense.com.ar/productos/" target="_blank" rel="noopener noreferrer" class="bento-box bento-shop" onclick="triggerTactile()">
                     <div class="bento-top">
                         <span class="bento-icon-symbol">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -908,13 +1098,16 @@
                         <span class="bento-arrow-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
                     </div>
                     <div>
-                        <div class="bento-title-text">Tienda Oficial</div>
+                        <div class="bento-title-text">
+                            Tienda Oficial
+                            <span class="bento-shop-badge">Oficial</span>
+                        </div>
                         <div class="bento-caption">Envíos a todo el país</div>
                     </div>
                 </a>
 
-                <!-- INSTAGRAM OFICIAL -->
-                <a href="https://instagram.com/orense.alfajores" target="_blank" rel="noopener noreferrer" class="bento-box" onclick="triggerTactile()">
+                <!-- INSTAGRAM OFICIAL (COLOR POP) -->
+                <a href="https://instagram.com/orense.alfajores" target="_blank" rel="noopener noreferrer" class="bento-box bento-insta" onclick="triggerTactile()">
                     <div class="bento-top">
                         <span class="bento-icon-symbol">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -927,7 +1120,7 @@
                     </div>
                 </a>
 
-                <!-- QUIÉNES SOMOS (ANCHO COMPLETO EDITORIAL) -->
+                <!-- QUIÉNES SOMOS (CORTE EDITORIAL ANCHO COMPLETO) -->
                 <a href="https://www.alfajoresorense.com.ar/quienes-somos/" target="_blank" rel="noopener noreferrer" class="bento-box full-width" onclick="triggerTactile()">
                     <div style="flex:1;">
                         <div class="bento-title-text">Quiénes Somos · Tradición de Bernal</div>
@@ -951,7 +1144,7 @@
                 </a>
 
                 <!-- CONTACTO Y DISTRIBUCIÓN MAYORISTA -->
-                <a href="https://www.alfajoresorense.com.ar/contacto/" target="_blank" rel="noopener noreferrer" class="bento-box" onclick="triggerTactile()">
+                <a href="https://www.alfajoresorense.com.ar/contacto/" target="_blank" rel="noopener noreferrer" class="bento-box bento-distro" onclick="triggerTactile()">
                     <div class="bento-top">
                         <span class="bento-icon-symbol">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -969,7 +1162,7 @@
         </nav>
 
         <!-- ==========================================================================
-             SHOWCASE ESCULTÓRICO: VARIEDADES DE AUTOR (CERO PRECIOS)
+             SHOWCASE ESCULTÓRICO: VARIEDADES DE AUTOR
              ========================================================================== -->
         <section class="showcase-section">
             <div class="showcase-bar">
@@ -1049,7 +1242,7 @@
         </section>
 
         <!-- ==========================================================================
-             DISTINCIÓN & TELEVISIÓN (TELENOCHE)
+             RECONOCIMIENTO TELENOCHE (BLOQUE ESCULTÓRICO DE CONTRASTE ELEVADO)
              ========================================================================== -->
         <article class="legacy-feature-card">
             <span class="legacy-eyebrow">Reconocimiento Nacional</span>
@@ -1060,7 +1253,7 @@
         </article>
 
         <!-- ==========================================================================
-             FOOTER DE ALTA COSTURA
+             FOOTER INSTITUCIONAL
              ========================================================================== -->
         <footer class="hub-colophon">
             <div class="colophon-monogram">ORENSE</div>
@@ -1074,7 +1267,7 @@
     </main>
 
     <!-- ==========================================================================
-         CONTROLADOR JS: CAMBIADOR DE PALETA + RESPUESTA HÁPTICA + MICRO-INTERACCIONES
+         CONTROLADOR JS
          ========================================================================== -->
     <script>
         function setOrensePalette(paletteName, displayName) {
@@ -1096,15 +1289,15 @@
             } catch(e) {}
         }
 
-        // VIBRACIÓN HÁPTICA SUTIL PARA DISPOSITIVOS TÁCTILES
+        // VIBRACIÓN HÁPTICA SUTIL
         function triggerTactile() {
             if ('vibrate' in navigator) {
                 try { navigator.vibrate(8); } catch(e) {}
             }
         }
 
-        // FÍSICA MAGNÉTICA SUTIL (ESTILO AMIR MOHSENI)
-        document.querySelectorAll('.card-action-hero, .bento-box').forEach(card => {
+        // FÍSICA MAGNÉTICA
+        document.querySelectorAll('.card-action-hero, .bento-box, .product-sculpture-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left - rect.width / 2;
